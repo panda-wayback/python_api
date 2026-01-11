@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-api"
+version = "1.0.0"
+description = "FastAPI 项目架构示例"
+readme = "readme.md"
+requires-python = ">=3.8"
+# 依赖管理使用 requirements.txt，不在这里定义
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.txt", "*.md"]

@@ -1,5 +1,15 @@
+# 安装依赖
+install-deps:
+	pip install -r requirements.txt
+
+# 安装项目为可编辑模式（开发环境，用于导入路径优化）
+install:
+	pip install -r requirements.txt
+	pip install -e .
+
+# 运行 FastAPI 应用（使用优化后的导入路径）
 run:
-	uvicorn app:app --host 0.0.0.0 --port 9000
+	uvicorn app.main:app --host 0.0.0.0 --port 9000 --reload
 
 # 一个方便的 push 命令
 # 包含所有 需要提交的文件
